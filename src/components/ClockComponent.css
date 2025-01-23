@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap'); /* Fuente digital */
+
+
+
+body {
+  background-color: #1e1e1e; /* Fondo oscuro para mayor contraste */
+  font-family: 'Press Start 2P', monospace;
+  
+  align-items: center;
+  overflow: hidden;
+}
+
+.clock {
+  font-size: 40px; /* Tamaño más grande para una mejor visibilidad */
+  color: #00ff00; /* Verde neón inicial */
+  text-shadow: 
+    0 0 10px rgba(0, 255, 0, 0.8),
+    0 0 20px rgba(0, 255, 0, 0.6),
+    0 0 30px rgba(0, 255, 0, 0.4),
+    0 0 40px rgba(0, 255, 0, 0.2),
+    0 0 50px rgba(0, 255, 0, 0.1),
+    0 0 60px rgba(0, 255, 0, 0.05); /* Brillo de neón */
+  padding: 40px 60px;
+  background-color: #000;
+  border-radius: 30px; /* Bordes redondeados para un look moderno */
+  box-shadow: 
+    0 0 30px rgba(0, 255, 0, 0.7),
+    0 0 50px rgba(0, 255, 0, 0.5),
+    0 0 80px rgba(0, 255, 0, 0.3),
+    0 0 100px rgba(0, 255, 0, 0.2); /* Efecto de sombra para profundidad */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: pulse 3s ease-in-out infinite; /* Animación de pulso */
+  transition: transform 0.5s ease, background-color 0.6s ease; /* Transición suave */
+  cursor: pointer; /* Cambiar el cursor a mano para indicar interactividad */
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    text-shadow: 
+      0 0 10px rgba(0, 255, 0, 0.8),
+      0 0 20px rgba(0, 255, 0, 0.6),
+      0 0 30px rgba(0, 255, 0, 0.4),
+      0 0 40px rgba(0, 255, 0, 0.2),
+      0 0 50px rgba(0, 255, 0, 0.1),
+      0 0 60px rgba(0, 255, 0, 0.05);
+  }
+  50% {
+    transform: scale(1.1); /* Aumentar tamaño */
+    text-shadow: 
+      0 0 20px rgba(0, 255, 0, 1),
+      0 0 30px rgba(0, 255, 0, 0.8),
+      0 0 40px rgba(0, 255, 0, 0.6),
+      0 0 60px rgba(0, 255, 0, 0.4),
+      0 0 80px rgba(0, 255, 0, 0.2);
+  }
+  100% {
+    transform: scale(1);
+    text-shadow: 
+      0 0 10px rgba(0, 255, 0, 0.8),
+      0 0 20px rgba(0, 255, 0, 0.6),
+      0 0 30px rgba(0, 255, 0, 0.4),
+      0 0 40px rgba(0, 255, 0, 0.2),
+      0 0 50px rgba(0, 255, 0, 0.1),
+      0 0 60px rgba(0, 255, 0, 0.05);
+  }
+}
+
+.clock:hover {
+  transform: scale(1.05); /* Efecto de zoom suave al pasar el ratón */
+  box-shadow: 0 0 100px rgba(0, 255, 0, 0.7), 0 0 150px rgba(0, 255, 0, 0.5); /* Sombra adicional */
+}
+
+.clock.clicked {
+  color: #ff0000; /* Cambio de color a rojo */
+  text-shadow: 
+    0 0 10px rgba(255, 0, 0, 0.8),
+    0 0 20px rgba(255, 0, 0, 0.6),
+    0 0 30px rgba(255, 0, 0, 0.4),
+    0 0 40px rgba(255, 0, 0, 0.2),
+    0 0 50px rgba(255, 0, 0, 0.1),
+    0 0 60px rgba(255, 0, 0, 0.05); /* Brillo de neón rojo */
+  background-color: #111; /* Fondo oscuro cuando se hace clic */
+}

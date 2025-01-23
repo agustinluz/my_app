@@ -1,0 +1,34 @@
+/* Toggle.css */
+.toggle-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+}
+
+.toggle-button {
+  font-size: 18px;
+  font-weight: bold;
+  padding: 10px 30px;
+  border: 2px solid #4caf50;
+  border-radius: 50px;
+  background: linear-gradient(135deg, #4caf50, #81c784);
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.toggle-button.off {
+  background: linear-gradient(135deg, #f44336, #e57373);
+  border-color: #f44336;
+}
+
+.toggle-button:hover {
+  transform: scale(1.1);
+}
+
+.toggle-button:active {
+  transform: scale(0.95);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
